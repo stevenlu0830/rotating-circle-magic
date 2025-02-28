@@ -1,6 +1,6 @@
 
 import { useEffect, useState } from "react";
-import RotatingCircle from "@/components/RotatingCircle";
+import RotatingSquare from "@/components/RotatingSquare";
 
 const Index = () => {
   const [mounted, setMounted] = useState(false);
@@ -31,15 +31,15 @@ const Index = () => {
         </p>
       </div>
       
-      {/* Main rotating circle in the center */}
+      {/* Main rotating square in the center */}
       <div className="my-16 relative">
-        <RotatingCircle className="z-10" />
+        <RotatingSquare className="z-10" />
         
         {/* Glass effect backdrop */}
-        <div className="absolute -inset-12 bg-white/30 backdrop-blur-md rounded-full -z-10"></div>
+        <div className="absolute -inset-12 bg-white/30 backdrop-blur-md -z-10"></div>
         
         {/* Subtle shadow/light effect */}
-        <div className="absolute -inset-20 bg-gradient-radial from-white/20 to-transparent rounded-full -z-20"></div>
+        <div className="absolute -inset-20 bg-gradient-radial from-white/20 to-transparent -z-20"></div>
       </div>
       
       {/* Bottom text */}
