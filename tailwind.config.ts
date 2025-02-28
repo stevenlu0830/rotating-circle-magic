@@ -1,3 +1,4 @@
+
 import type { Config } from "tailwindcss";
 
 export default {
@@ -84,11 +85,45 @@ export default {
 					to: {
 						height: '0'
 					}
+				},
+				'rotate': {
+					'0%': {
+						transform: 'rotate(0deg)'
+					},
+					'100%': {
+						transform: 'rotate(360deg)'
+					}
+				},
+				'pulse-subtle': {
+					'0%, 100%': {
+						opacity: '1',
+						transform: 'scale(1)'
+					},
+					'50%': {
+						opacity: '0.85',
+						transform: 'scale(0.98)'
+					}
+				},
+				'fade-in': {
+					'0%': {
+						opacity: '0'
+					},
+					'100%': {
+						opacity: '1'
+					}
 				}
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
-				'accordion-up': 'accordion-up 0.2s ease-out'
+				'accordion-up': 'accordion-up 0.2s ease-out',
+				'rotate-slow': 'rotate 20s linear infinite',
+				'rotate-medium': 'rotate 15s linear infinite',
+				'rotate-fast': 'rotate 10s linear infinite',
+				'rotate-reverse-slow': 'rotate 20s linear infinite reverse',
+				'rotate-reverse-medium': 'rotate 15s linear infinite reverse',
+				'rotate-reverse-fast': 'rotate 10s linear infinite reverse',
+				'pulse-subtle': 'pulse-subtle 3s ease-in-out infinite',
+				'fade-in': 'fade-in 1.5s ease-out forwards'
 			}
 		}
 	},
